@@ -1,0 +1,366 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Geometry’s documentation! &#8212; Geometry  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9 maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-geometry-s-documentation">
+<h1>Welcome to Geometry’s documentation!<a class="headerlink" href="#welcome-to-geometry-s-documentation" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="Geometry">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Geometry</code><a class="headerlink" href="#Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is Geometry!</p>
+<dl class="py method">
+<dt id="getRing">
+<em class="property">static </em><code class="sig-name descname">getRing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span><span class="o">=</span><span class="default_value">'QQ'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#getRing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current ring in the geometry</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="point">
+<em class="property">static </em><code class="sig-name descname">point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="triangle">
+<em class="property">static </em><code class="sig-name descname">triangle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v1</span></em>, <em class="sig-param"><span class="n">v2</span></em>, <em class="sig-param"><span class="n">v3</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a triangle</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Quadrilateral">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Quadrilateral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">D</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Quadrilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the class which describes the points A, B, C and D as a Quadrilateral</p>
+<dl class="py method">
+<dt id="isCyclic">
+<code class="sig-name descname">isCyclic</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#isCyclic" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns an ideal describing ABCD as a Cyclic Quadrilateral</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="isParallelogram">
+<code class="sig-name descname">isParallelogram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#isParallelogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns an ideal describing ABCD as a Parallelogram</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Circle">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Circle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">O</span></em>, <em class="sig-param"><span class="n">r</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Circle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="CircleIntersection">
+<code class="sig-name descname">circleIntersection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">circle</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#CircleIntersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>self interects with circle at points P and Q</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="isDiameter">
+<code class="sig-name descname">isDiameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isDiameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>PQ is the diameter of a circle</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="onCircle">
+<code class="sig-name descname">onCircle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onCircle" title="Permalink to this definition">¶</a></dt>
+<dd><p>P lies on circle</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Triangle">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Triangle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v1</span></em>, <em class="sig-param"><span class="n">v2</span></em>, <em class="sig-param"><span class="n">v3</span></em>, <em class="sig-param"><span class="n">area_inv</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Triangle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="cevians">
+<code class="sig-name descname">cevians</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">D</span></em>, <em class="sig-param"><span class="n">E</span></em>, <em class="sig-param"><span class="n">F</span></em>, <em class="sig-param"><span class="n">O</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cevians" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the three cevians AD, BE, and CF of triangle ABC with point O</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Triangle">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Point</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is the Point class</p>
+<dl class="py method">
+<dt id="fix">
+<code class="sig-name descname">fix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="headerlink" href="#fix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give real coordinates for a point</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="getName">
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perhaps add a set name?</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Line">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Line</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inPoints</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Line" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="isDistance">
+<code class="sig-name descname">isDistance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>d is the distance from P to Q</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="isLine">
+<em class="property">static </em><code class="sig-name descname">isLine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inPoints</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isLine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Searches if a line already exists</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="perpendicularFoot">
+<code class="sig-name descname">perpendicularFoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">D</span></em>, <em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicularFoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>D is the foot</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<dl class="py class">
+<dt id="Triangle">
+<em class="property">class </em><code class="sig-prename descclassname"></code><code class="sig-name descname">Angle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">tanVar</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#Triangle" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt id="getName">
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perhaps add a set name?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="getTanName">
+<code class="sig-name descname">getTanName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#getTanName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perhaps add a set name?</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="isHalfAngle">
+<code class="sig-name descname">isHalfAngle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isHalfAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Self is a half angle of P</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="isRightAngle">
+<code class="sig-name descname">isRightAngle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#isRightAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle at PQR is a right angle</p>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<span class="target" id="module-Functions"></span><dl class="py function">
+<dt id="centroid">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">centroid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">G</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em><span class="sig-paren">)</span><a class="headerlink" href="#centroid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the centroid G of triangle ABC</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="circumcentre">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">circumcentre</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">O</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em><span class="sig-paren">)</span><a class="headerlink" href="#circumcentre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the circumcentre O of triangle ABC</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="collinear">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">collinear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em>, <em class="sig-param"><span class="n">R</span></em><span class="sig-paren">)</span><a class="headerlink" href="#collinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>P, Q, and R are collinear</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="cyclicQuadrilateral">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">cyclicQuadrilateral</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">D</span></em><span class="sig-paren">)</span><a class="headerlink" href="#cyclicQuadrilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>ABCD is a cyclic quadrilateral (opposite angles add to 180)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="isAngleBisector">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">isAngleBisector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">X</span></em>, <em class="sig-param"><span class="n">Y</span></em>, <em class="sig-param"><span class="n">Z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isAngleBisector" title="Permalink to this definition">¶</a></dt>
+<dd><p>AY bisects XAZ</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="isAngleSum">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">isAngleSum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isAngleSum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angle a = angle b + angle c</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="isDistance">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">isDistance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">d</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>d is the distance from P to Q</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="isMidpoint">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">isMidpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">M</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#isMidpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates M as the midpoint of PQ</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="ninePointCentre">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">ninePointCentre</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">N</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em><span class="sig-paren">)</span><a class="headerlink" href="#ninePointCentre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the 9 point centre N of triangle ABC</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="onCircle">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">onCircle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">O</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="headerlink" href="#onCircle" title="Permalink to this definition">¶</a></dt>
+<dd><p>P lies on circle, centre O, radius r</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="orthocentre">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">orthocentre</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">H</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em><span class="sig-paren">)</span><a class="headerlink" href="#orthocentre" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the orthocentre H of triangle ABC</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="parallel">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">parallel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P1</span></em>, <em class="sig-param"><span class="n">Q1</span></em>, <em class="sig-param"><span class="n">P2</span></em>, <em class="sig-param"><span class="n">Q2</span></em><span class="sig-paren">)</span><a class="headerlink" href="#parallel" title="Permalink to this definition">¶</a></dt>
+<dd><p>P1Q1 is parallel to P2Q2</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="perpendicular">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">perpendicular</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicular" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lines AB and QR are perpendicular</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="perpendicularFoot">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">perpendicularFoot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">D</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#perpendicularFoot" title="Permalink to this definition">¶</a></dt>
+<dd><p>D is the foot of the perpendicular from A to PQ</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="powerOfPointCondition">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">powerOfPointCondition</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">circle</span></em>, <em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">B</span></em>, <em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">D</span></em>, <em class="sig-param"><span class="n">P</span></em><span class="sig-paren">)</span><a class="headerlink" href="#powerOfPointCondition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the conditions sufficient for the power of a point theorem for point P to hold</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="rightAngle">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">rightAngle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em>, <em class="sig-param"><span class="n">R</span></em><span class="sig-paren">)</span><a class="headerlink" href="#rightAngle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The angle at PQR is a right angle</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="squareDistance">
+<code class="sig-prename descclassname"></code><code class="sig-name descname">squareDistance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">P</span></em>, <em class="sig-param"><span class="n">Q</span></em><span class="sig-paren">)</span><a class="headerlink" href="#squareDistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the square distance of PQ</p>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Geometry</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Dr James Cranch and Jamie Wright.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

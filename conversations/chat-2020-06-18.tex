@@ -1,0 +1,67 @@
+\documentclass[a4paper, 14pt]{extarticle}
+\usepackage{amsmath, amssymb, mathpazo, tikz}
+
+\title{More on ideals}
+
+\begin{document}
+\maketitle
+
+\section{Ideal sums}
+
+Let $R=k[x_1,\ldots,x_n]$, and let $I$ and $J$ be ideals of $R$.
+
+We can define a new ideal
+\[I+J=\left\{i+j\mid i\in I,j\in J\right\}.\]
+
+If $I=\left<a_1,\ldots,a_r\right>$ and
+$J=\left<b_1,\ldots,b_s\right>$, then
+\[I+J=\left<a_1,\ldots,a_r,b_1,\ldots,b_s\right>.\]
+
+(So ideal sums can be used to collect systems of equations together).
+
+\section{``The two points such that\ldots''}
+
+We've had a number of issues where things go wrong unless we assume
+various points differ (for example, by assuming their $x$-coordinates
+differ).
+
+On the one hand, we should probably get into the habit of assuming our
+inputs are nondegenerate (various points differ, triangles are not
+collinear, etc).
+
+In fact, the area of a triangle is given by the determinant
+\begin{displaymath}
+  \frac{1}{2}\left|\begin{matrix}
+  1 & a_x & a_y\\
+  1 & b_x & b_y\\
+  1 & c_x & c_y
+  \end{matrix}\right|,
+\end{displaymath}
+so assuming that that determinant has an inverse is assuming that the
+triangle is nondegenerate.
+
+There is another way, worth knowing of approaching questions like
+this. Often, there are two points which work, and we want to say $A$
+and $B$ are those two points, in some order. For example, we want to
+be able to say ``let $A$ and $B$ be the two points where a line $\ell$
+meets a circle $C$''.
+
+In these cases, there's normally a quadratic equation floating around,
+where the $x$-coordinates of $A$ and $B$ are the two roots.
+
+This is true in our example: if we have line $\ell$ given by $y =
+mx+c$, and we substitute that into the equation $(y-y_0)^2 + (x-x_0)^2
+= r^2$ of a circle $C$.
+
+There is a neat trick for saying $a$ and $b$ are the two roots of a
+quadratic equation $uX^2 + vX + w$, namely we can use that, as
+polynomials,
+\[uX^2 + vX + w = u(X-a)(X-b)\]
+which gives us equations
+\begin{align*}
+  u &= u\\
+  v &= -u(a+b)\\
+  w &= uab.
+\end{align*}
+
+\end{document}

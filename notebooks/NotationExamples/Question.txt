@@ -1,0 +1,5 @@
+Consider five points A,B,C,D and E such that ABCD is a parallelogram and BCED is a cyclic quadrilateral
+Let L be a line passing through A
+Suppose that L intersects the interior of the segment DC at F and intersects line BC at G
+Suppose also that EF=EG=EC
+Prove that L is the bisector of angle DAB

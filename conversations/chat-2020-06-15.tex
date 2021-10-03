@@ -1,0 +1,104 @@
+\documentclass[a4paper, 14pt]{extarticle}
+\usepackage{amsmath, amssymb, mathpazo}
+
+\title{Polynomials and geometry}
+
+\newcommand{\bC}{\mathbb{C}}
+
+\begin{document}
+\maketitle
+
+\subsection*{Example constructions}
+
+Line (by gradient and intercept): $y=mx+c$
+
+Line (by two points):
+\begin{align*}
+  \frac{y-y_1}{y_2-y_1} &= \frac{x-x_1}{x_2-x_1}\\
+  (y-y_1)(x_2-x_1) &= (x-x_1)(y_2-y_1)
+\end{align*}
+
+Circle: $(y-y_c)^2 + (x-x_c)^2 = r^2$
+
+\subsection*{Polynomial algebra}
+
+We work with a ring $\bC[x_1,\ldots,x_n]$, the ring of (multivariate)
+polynomials in variables $x_1,\ldots,x_n$. If there are a small number
+of variables, we'll call them $x, y, z$ rather than $x_1, x_2, x_3$.
+
+A polynomial is a sum of \emph{terms}, each of which is a
+\emph{coefficient} multiplied by a \emph{monomial}. So for example, if
+I have
+\[37x_1^2x_5 - x_2 + 10\]
+then the term $37x_1^2x_5$ has the coefficient $37$ and the monomial
+$x_1^2x_5$.
+
+Instead of working with equations, we simply remember which things are
+``supposed to be zero''. So instead of $y=mx+c$ we work with
+$y-mx-c=0$.
+
+An \emph{ideal} $I\subset\bC[x_1,\ldots,x_n]$ is a set of polynomials
+with the following properties:
+\begin{enumerate}
+\item If $f,g\in I$, then $f+g\in I$;
+\item If $f\in I$, and $g\in\bC[x_1,\ldots,x_n]$, then $fg\in I$.
+\end{enumerate}
+
+For a simple example of an ideal in $\bC[x,y]$, (if someone tells you
+that $x=0$), the set of polynomials which are multiples of $x$ is an
+ideal.  $x^3+xy\in I$, but $x^3 + xy - 7y \notin I$.
+
+The general case looks like this: given elements
+\[f_1,\ldots,f_d\in\bC[x_1,\ldots,x_n]\]
+I can form an ideal
+\[\left<f_1,\ldots,f_d\right> = \left\{f_1g_1+\cdots+f_dg_d\mid g_1,\ldots,g_d\in\bC[x_1,\ldots,x_n]\right\}\]
+
+My simple example a moment ago was $\left<x\right>$.
+
+The ideal $\left<f_1,\ldots,f_d\right>$ is the smallest ideal
+containing $f_1,\ldots,f_d$.
+
+In other words, if someone comes along and tells us that
+$f_1,\ldots,f_d=0$, then $\left<f_1,\ldots,f_d\right>$ is the set of
+polynomials we deduce are also zero by polynomial algebra.
+
+So the basic problem is, now, given polynomials $f_1,\ldots,f_d,g$,
+can we tell if $g\in\left<f_1,\ldots,f_d\right>$? It turns out that
+this is a bit fiddly.
+
+Consider $I = \left<x^{99}y^{100}+x, x^{100}y^{99}\right>$. This ideal contains
+\[x(x^{99}y^{100}+x) - y(x^{100}y^{99}) = x^2.\]
+As a result it also contains $x$, and in fact $I = \left<x\right>$.
+
+Is there a means of calculating that makes it obvious that $x$ is in
+this ideal? Yes, there is!
+
+It's a two part plan:
+\begin{enumerate}
+\item start by transforming the ideal so that it has ``nice
+  generators'',
+\item persuade ourselves that, if it has ``nice generators'' then we
+  can tell what's in it easily.
+\end{enumerate}
+
+The notion of ``nice generators'' is called being a \emph{Gr\"obner
+  basis}.
+
+\subsection*{To do\ldots}
+
+Work out how to reproduce this in SAGE: work out to define a
+polynomial ring $\bC[x,y]$, and define the ideal
+$\left<x^{99}y^{100}+x, x^{100}y^{99}\right>$, and get SAGE to check
+that a Gr\"obner basis for it is $\left<x\right>$.
+
+Mess around a bit with other examples to get a feel.
+
+Take a very small geometry problem, and see if you can completely
+describe it as a question of polynomial algebra. Keep count of the
+number of variables and equations. Can you get SAGE to do it with a
+Grobner basis?
+
+Proposed example: Thales's theorem (this that says that the angle in a
+semicircle is a right angle).
+
+\end{document}
